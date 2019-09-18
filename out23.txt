@@ -1,0 +1,93 @@
+
+%run -i "/tmp/tmpUpWfwn.py"
+
+---: [23]  West_Bengal operation :-------
+---------------------------------------------
+Dimension of the data frame =  (13876, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      292
+4G                    11449
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  West_Bengal-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (416, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   119
+CELLONE                    6
+IDEA                      41
+VODAFONE                 250
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  West_Bengal-3G operation  :-------
+
+---: convert to  West_Bengal-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (13460, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  3481
+JIO                     6958
+VODAFONE                3021
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---:  West_Bengal-4G operation  :-------
