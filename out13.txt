@@ -1,0 +1,94 @@
+
+%run -i "/tmp/tmpjO7PUx.py"
+
+---: [13]  Madhya_Pradesh operation :-------
+---------------------------------------------
+Dimension of the data frame =  (28921, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                     2537
+4G                    22775
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  Madhya_Pradesh-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (3042, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   143
+CELLONE                 2439
+IDEA                     458
+VODAFONE                   2
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  Madhya_Pradesh-3G operation  :-------
+
+---: convert to  Madhya_Pradesh-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (25879, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  3967
+CELLONE                   42
+IDEA                    3717
+JIO                    18153
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  Madhya_Pradesh-4G operation  :-------
