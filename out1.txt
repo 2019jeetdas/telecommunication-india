@@ -1,0 +1,94 @@
+%run -i "/tmp/tmpeKYzog.py"
+
+---: Andhra Pradesh operation :-------
+---------------------------------------------
+Dimension of the data frame =  (45629, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                     2808
+4G                    36062
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to andhra-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (4310, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names in Andhra Pradesh : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   160
+CELLONE                 3312
+IDEA                     835
+VODAFONE                   3
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---: andhra-3G operation  :-------
+
+---: convert to andhra-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (41319, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names in Andhra Pradesh : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  6629
+CELLONE                 2973
+IDEA                    8407
+JIO                    23302
+VODAFONE                   8
+-------------------------------
+total no. of service provider =  5
+-----------------------------
+
+
+---: andhra-4G operation  :-------
