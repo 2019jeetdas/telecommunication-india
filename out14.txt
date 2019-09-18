@@ -1,0 +1,95 @@
+
+%run -i "/tmp/tmpjaDuYn.py"
+
+---: [14]  Maharastra operation :-------
+---------------------------------------------
+Dimension of the data frame =  (89959, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                     5794
+4G                    74818
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  Maharastra-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (8032, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   460
+CELLONE                 3742
+IDEA                    3529
+VODAFONE                 301
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  Maharastra-3G operation  :-------
+
+---: convert to  Maharastra-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (81927, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  5783
+CELLONE                  898
+IDEA                   22243
+JIO                    47477
+VODAFONE                5526
+-------------------------------
+total no. of service provider =  5
+-----------------------------
+
+
+---:  Maharastra-4G operation  :-------
