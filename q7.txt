@@ -1,7 +1,7 @@
 # [7] Haryana
 
 
-print("\n---: [6]  haryana operation :-------")
+print("\n---: [7]  haryana operation :-------")
 df_haryana = df[df.Service_Area == 'Haryana']
 print('---------------------------------------------')
 print("Dimension of the data frame = ",df_haryana.shape)
