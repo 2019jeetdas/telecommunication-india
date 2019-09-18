@@ -1,0 +1,93 @@
+
+%run -i "/tmp/tmpVEYcb7.py"
+
+---: [16]  North_East operation :-------
+---------------------------------------------
+Dimension of the data frame =  (6927, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                       77
+4G                     5611
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  North_East-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (162, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                    17
+CELLONE                   12
+VODAFONE                 133
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---:  North_East-3G operation  :-------
+
+---: convert to  North_East-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (6765, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  1134
+CELLONE                   32
+JIO                     4964
+VODAFONE                 635
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  North_East-4G operation  :-------
