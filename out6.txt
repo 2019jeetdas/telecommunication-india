@@ -1,0 +1,94 @@
+
+%run -i "/tmp/tmpTRy_Li.py"
+
+---: [6]  gujrat operation :-------
+---------------------------------------------
+Dimension of the data frame =  (29879, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      518
+4G                    26387
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  gujrat-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (803, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   127
+CELLONE                    2
+IDEA                     361
+VODAFONE                 313
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  gujrat-3G operation  :-------
+
+---: convert to  gujrat-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (29076, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  2108
+IDEA                    3865
+JIO                    17577
+VODAFONE                5526
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  gujrat-4G operation  :-------
