@@ -1,0 +1,93 @@
+
+%run -i "/tmp/tmp5f9n_W.py"
+
+---: [4]  chennai operation :-------
+---------------------------------------------
+Dimension of the data frame =  (7754, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      956
+4G                     5862
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  chennai-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (1156, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names in Andhra Pradesh : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                    62
+CELLONE                  966
+VODAFONE                 128
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---:  chennai-3G operation  :-------
+
+---: convert to  chennai-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (6598, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names in Andhra Pradesh : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  1370
+IDEA                     391
+JIO                     3727
+VODAFONE                1110
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  chennai-4G operation  :-------
