@@ -1,0 +1,95 @@
+
+%run -i "/tmp/tmptBXRdd.py"
+
+---: [19]  Rajasthan operation :-------
+---------------------------------------------
+Dimension of the data frame =  (21236, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      328
+4G                    18671
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  Rajasthan-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (538, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   193
+CELLONE                   12
+IDEA                      69
+VODAFONE                 264
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  Rajasthan-3G operation  :-------
+
+---: convert to  Rajasthan-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (20698, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  2842
+CELLONE                   12
+IDEA                     579
+JIO                    14844
+VODAFONE                2421
+-------------------------------
+total no. of service provider =  5
+-----------------------------
+
+
+---:  Rajasthan-4G operation  :-------
