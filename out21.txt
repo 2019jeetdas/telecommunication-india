@@ -1,0 +1,97 @@
+
+%run -i "/tmp/tmpldqF0p.py"
+
+---: [21]  UP_East operation :-------
+---------------------------------------------
+Dimension of the data frame =  (71074, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                     1010
+4G                    63761
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  UP_East-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (1326, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   429
+CELLONE                    4
+IDEA                      89
+VODAFONE                 804
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  UP_East-3G operation  :-------
+
+---: convert to  UP_East-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (69748, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                 16182
+CELLONE                    3
+IDEA                     215
+JIO                    43721
+VODAFONE                9627
+-------------------------------
+total no. of service provider =  5
+-----------------------------
+
+
+---:  UP_East-4G operation  :-------
+
+In [173]:
