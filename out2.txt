@@ -46,7 +46,7 @@ Dimension of the data frame =  (96, 6)
 -----------------------------
 
 ---------------------------------
-         Service provider names in Andhra Pradesh : 
+         Service provider names in Assam : 
 -------------------------------
                   technology
 Service_provider            
@@ -77,7 +77,7 @@ Dimension of the data frame =  (7139, 6)
 -----------------------------
 
 ---------------------------------
-         Service provider names in Andhra Pradesh : 
+         Service provider names in Assam : 
 -------------------------------
                   technology
 Service_provider            
