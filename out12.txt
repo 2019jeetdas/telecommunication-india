@@ -1,0 +1,92 @@
+
+%run -i "/tmp/tmpGsxSDx.py"
+
+---: [12]  Kolkata operation :-------
+---------------------------------------------
+Dimension of the data frame =  (14094, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      332
+4G                    12732
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  Kolkata-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (409, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+CELLONE                    8
+IDEA                     155
+VODAFONE                 246
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---:  Kolkata-3G operation  :-------
+
+---: convert to  Kolkata-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (13685, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  1864
+JIO                     9772
+VODAFONE                2049
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---:  Kolkata-4G operation  :-------
