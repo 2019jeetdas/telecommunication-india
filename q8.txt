@@ -1,0 +1,286 @@
+
+
+
+print("\n---: [8]  himachal_pradesh operation :-------")
+df_himachal_pradesh = df[df.Service_Area == 'Himachal Pradesh']
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df_himachal_pradesh.shape)
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df_himachal_pradesh.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n") 
+
+# available technologies in  himachal_pradesh 
+
+techno_himachal_pradesh = df_himachal_pradesh.groupby(['technology'])[['signal_strength']].count()
+print("---------------------------------")
+print("\t Available techonologies : ")
+print("-------------------------------")
+print(techno_himachal_pradesh)
+print("-------------------------------")
+count = 0
+for row in range(len(techno_himachal_pradesh)): 
+        count = count+1
+print("total no. of available technologies = ",count)        
+print("-----------------------------\n") 
+
+#  himachal_pradesh 3G operation
+
+print("\n---: convert to  himachal_pradesh-3G operation :-------")
+df_himachal_pradesh_3G = df_himachal_pradesh[df_himachal_pradesh.technology == '3G']
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df_himachal_pradesh_3G.shape)
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df_himachal_pradesh_3G.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+# print service providers in  himachal_pradesh 3G
+
+df_himachal_pradesh_3G_sp = df_himachal_pradesh_3G.groupby(['Service_provider'])[['technology']].count()
+print("---------------------------------")
+print("\t Service provider names  : ")
+print("-------------------------------")
+print(df_himachal_pradesh_3G_sp)
+print("-------------------------------")
+count = 0
+for row in range(len(df_himachal_pradesh_3G_sp)): 
+        count = count+1
+print("total no. of service provider = ",count)        
+print("-----------------------------\n")                                                                              
+ 
+# df_himachal_pradesh_3G_sp_AIRTEL
+# df_himachal_pradesh_3G_sp_CELLONE                 
+# df_himachal_pradesh_3G_sp_IDEA                     
+# df_himachal_pradesh_3G_sp_VODAFONE   
+
+print("\n---:  himachal_pradesh-3G operation  :-------")
+
+df_himachal_pradesh_3G_AIRTEL = df_himachal_pradesh_3G[df_himachal_pradesh_3G.Service_provider == 'AIRTEL']
+df_himachal_pradesh_3G_CELLONE = df_himachal_pradesh_3G[df_himachal_pradesh_3G.Service_provider == 'CELLONE']
+df_himachal_pradesh_3G_IDEA = df_himachal_pradesh_3G[df_himachal_pradesh_3G.Service_provider == 'IDEA']
+df_himachal_pradesh_3G_VODAFONE = df_himachal_pradesh_3G[df_himachal_pradesh_3G.Service_provider == 'VODAFONE']
+
+# [1-A]  himachal_pradesh  3G upload plotting
+
+df_himachal_pradesh_3G_AIRTEL_upload = df_himachal_pradesh_3G_AIRTEL[df_himachal_pradesh_3G_AIRTEL.Download_Upload == 'upload']
+df_himachal_pradesh_3G_CELLONE_upload = df_himachal_pradesh_3G_CELLONE[df_himachal_pradesh_3G_CELLONE.Download_Upload == 'upload']
+df_himachal_pradesh_3G_IDEA_upload = df_himachal_pradesh_3G_IDEA[df_himachal_pradesh_3G_IDEA.Download_Upload == 'upload']
+df_himachal_pradesh_3G_VODAFONE_upload = df_himachal_pradesh_3G_VODAFONE[df_himachal_pradesh_3G_VODAFONE.Download_Upload == 'upload']
+
+x1 = np.arange(0,len(df_himachal_pradesh_3G_AIRTEL_upload['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_himachal_pradesh_3G_CELLONE_upload['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_himachal_pradesh_3G_IDEA_upload['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_himachal_pradesh_3G_VODAFONE_upload['Data_Speed.Kbps.']))
+
+plt.title('[1-A]  himachal_pradesh  3G upload plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_himachal_pradesh_3G_AIRTEL_upload['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - upload",
+            marker='*')
+
+plt.scatter(x2,
+            df_himachal_pradesh_3G_CELLONE_upload['Data_Speed.Kbps.'],
+            label="[2] CELLONE - upload",
+            marker='+')
+            
+plt.scatter(x3,
+            df_himachal_pradesh_3G_IDEA_upload['Data_Speed.Kbps.'],
+            label="[3] IDEA - upload",
+            marker='^')
+
+plt.scatter(x4,
+            df_himachal_pradesh_3G_VODAFONE_upload['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - upload",
+            marker='o')
+
+plt.legend()
+plt.show()                
+
+#[1-B]  himachal_pradesh  3G download plotting
+
+                                                                                                                                                          
+df_himachal_pradesh_3G_AIRTEL_download = df_himachal_pradesh_3G_AIRTEL[df_himachal_pradesh_3G_AIRTEL.Download_Upload == 'download']
+df_himachal_pradesh_3G_CELLONE_download = df_himachal_pradesh_3G_CELLONE[df_himachal_pradesh_3G_CELLONE.Download_Upload == 'download']
+df_himachal_pradesh_3G_IDEA_download = df_himachal_pradesh_3G_IDEA[df_himachal_pradesh_3G_IDEA.Download_Upload == 'download']
+df_himachal_pradesh_3G_VODAFONE_download = df_himachal_pradesh_3G_VODAFONE[df_himachal_pradesh_3G_VODAFONE.Download_Upload == 'download']
+
+x1 = np.arange(0,len(df_himachal_pradesh_3G_AIRTEL_download['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_himachal_pradesh_3G_CELLONE_download['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_himachal_pradesh_3G_IDEA_download['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_himachal_pradesh_3G_VODAFONE_download['Data_Speed.Kbps.']))
+
+plt.title('[1-B]  himachal_pradesh  3G download plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_himachal_pradesh_3G_AIRTEL_download['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - download",
+            marker='*')
+
+plt.scatter(x2,
+            df_himachal_pradesh_3G_CELLONE_download['Data_Speed.Kbps.'],
+            label="[2] CELLONE - download",
+            marker='+')
+            
+plt.scatter(x3,
+            df_himachal_pradesh_3G_IDEA_download['Data_Speed.Kbps.'],
+            label="[3] IDEA - download",
+            marker='^')
+
+plt.scatter(x4,
+            df_himachal_pradesh_3G_VODAFONE_download['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - download",
+            marker='o')
+
+plt.legend()
+plt.show() 
+
+#  himachal_pradesh 4G operation
+
+print("\n---: convert to  himachal_pradesh-4G operation :-------")
+df_himachal_pradesh_4G = df_himachal_pradesh[df_himachal_pradesh.technology == '4G']
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df_himachal_pradesh_4G.shape)
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df_himachal_pradesh_4G.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+# print service providers in  himachal_pradesh 4G
+
+df_himachal_pradesh_4G_sp = df_himachal_pradesh_4G.groupby(['Service_provider'])[['technology']].count()
+print("---------------------------------")
+print("\t Service provider names : ")
+print("-------------------------------")
+print(df_himachal_pradesh_4G_sp)
+print("-------------------------------")
+count = 0
+for row in range(len(df_himachal_pradesh_4G_sp)): 
+        count = count+1
+print("total no. of service provider = ",count)        
+print("-----------------------------\n")                                                                              
+ 
+# df_himachal_pradesh_4G_sp_AIRTEL
+# df_himachal_pradesh_4G_sp_CELLONE                 
+# df_himachal_pradesh_4G_sp_IDEA                     
+# df_himachal_pradesh_4G_sp_VODAFONE 
+# df_himachal_pradesh_4G_sp_JIO  
+
+print("\n---:  himachal_pradesh-4G operation  :-------")
+
+df_himachal_pradesh_4G_AIRTEL = df_himachal_pradesh_4G[df_himachal_pradesh_4G.Service_provider == 'AIRTEL']
+df_himachal_pradesh_4G_CELLONE = df_himachal_pradesh_4G[df_himachal_pradesh_4G.Service_provider == 'CELLONE']
+df_himachal_pradesh_4G_IDEA = df_himachal_pradesh_4G[df_himachal_pradesh_4G.Service_provider == 'IDEA']
+df_himachal_pradesh_4G_VODAFONE = df_himachal_pradesh_4G[df_himachal_pradesh_4G.Service_provider == 'VODAFONE']
+df_himachal_pradesh_4G_JIO = df_himachal_pradesh_4G[df_himachal_pradesh_4G.Service_provider == 'JIO']
+
+#  himachal_pradesh  4G upload plotting
+
+df_himachal_pradesh_4G_AIRTEL_upload = df_himachal_pradesh_4G_AIRTEL[df_himachal_pradesh_4G_AIRTEL.Download_Upload == 'upload']
+df_himachal_pradesh_4G_CELLONE_upload = df_himachal_pradesh_4G_CELLONE[df_himachal_pradesh_4G_CELLONE.Download_Upload == 'upload']
+df_himachal_pradesh_4G_IDEA_upload = df_himachal_pradesh_4G_IDEA[df_himachal_pradesh_4G_IDEA.Download_Upload == 'upload']
+df_himachal_pradesh_4G_VODAFONE_upload = df_himachal_pradesh_4G_VODAFONE[df_himachal_pradesh_4G_VODAFONE.Download_Upload == 'upload']
+df_himachal_pradesh_4G_JIO_upload = df_himachal_pradesh_4G_JIO[df_himachal_pradesh_4G_JIO.Download_Upload == 'upload']
+
+x1 = np.arange(0,len(df_himachal_pradesh_4G_AIRTEL_upload['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_himachal_pradesh_4G_CELLONE_upload['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_himachal_pradesh_4G_IDEA_upload['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_himachal_pradesh_4G_VODAFONE_upload['Data_Speed.Kbps.']))
+x5 = np.arange(0,len(df_himachal_pradesh_4G_JIO_upload['Data_Speed.Kbps.']))
+
+plt.title('[1-C]  himachal_pradesh  4G upload plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_himachal_pradesh_4G_AIRTEL_upload['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - upload",
+            marker='*')
+
+plt.scatter(x2,
+            df_himachal_pradesh_4G_CELLONE_upload['Data_Speed.Kbps.'],
+            label="[2] CELLONE - upload",
+            marker='+')
+            
+plt.scatter(x3,
+            df_himachal_pradesh_4G_IDEA_upload['Data_Speed.Kbps.'],
+            label="[3] IDEA - upload",
+            marker='^')
+
+plt.scatter(x4,
+            df_himachal_pradesh_4G_VODAFONE_upload['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - upload",
+            marker='o')
+            
+plt.scatter(x5,
+            df_himachal_pradesh_4G_JIO_upload['Data_Speed.Kbps.'],
+            label="[5] JIO - upload",
+            marker='1')            
+
+plt.legend()
+plt.show()                
+
+
+#  himachal_pradesh  4G download plotting
+                                                                                                                                                          
+df_himachal_pradesh_4G_AIRTEL_download = df_himachal_pradesh_4G_AIRTEL[df_himachal_pradesh_4G_AIRTEL.Download_Upload == 'download']
+df_himachal_pradesh_4G_CELLONE_download = df_himachal_pradesh_4G_CELLONE[df_himachal_pradesh_4G_CELLONE.Download_Upload == 'download']
+df_himachal_pradesh_4G_IDEA_download = df_himachal_pradesh_4G_IDEA[df_himachal_pradesh_4G_IDEA.Download_Upload == 'download']
+df_himachal_pradesh_4G_VODAFONE_download = df_himachal_pradesh_4G_VODAFONE[df_himachal_pradesh_4G_VODAFONE.Download_Upload == 'download']
+df_himachal_pradesh_4G_JIO_download = df_himachal_pradesh_4G_JIO[df_himachal_pradesh_4G_JIO.Download_Upload == 'download']
+
+x1 = np.arange(0,len(df_himachal_pradesh_4G_AIRTEL_download['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_himachal_pradesh_4G_CELLONE_download['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_himachal_pradesh_4G_IDEA_download['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_himachal_pradesh_4G_VODAFONE_download['Data_Speed.Kbps.']))
+x5 = np.arange(0,len(df_himachal_pradesh_4G_JIO_download['Data_Speed.Kbps.']))
+
+plt.title('[1-D]  himachal_pradesh  4G download plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_himachal_pradesh_4G_AIRTEL_download['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - download",
+            marker='*')
+
+plt.scatter(x2,
+            df_himachal_pradesh_4G_CELLONE_download['Data_Speed.Kbps.'],
+            label="[2] CELLONE - download",
+            marker='+')
+            
+plt.scatter(x3,
+            df_himachal_pradesh_4G_IDEA_download['Data_Speed.Kbps.'],
+            label="[3] IDEA - download",
+            marker='^')
+
+plt.scatter(x4,
+            df_himachal_pradesh_4G_VODAFONE_download['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - download",
+            marker='o')
+            
+plt.scatter(x5,
+            df_himachal_pradesh_4G_JIO_download['Data_Speed.Kbps.'],
+            label="[5] JIO - download",
+            marker='1')            
+
+plt.legend()
+plt.show() 
+
