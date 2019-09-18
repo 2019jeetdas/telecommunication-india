@@ -1,0 +1,94 @@
+
+%run -i "/tmp/tmphygMjQ.py"
+
+---: [6]  haryana operation :-------
+---------------------------------------------
+Dimension of the data frame =  (12792, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      202
+4G                    11463
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  haryana-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (269, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                    60
+CELLONE                    2
+IDEA                      77
+VODAFONE                 130
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  haryana-3G operation  :-------
+
+---: convert to  haryana-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (12523, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  3627
+IDEA                     895
+JIO                     6179
+VODAFONE                1822
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  haryana-4G operation  :-------
