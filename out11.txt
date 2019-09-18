@@ -1,0 +1,97 @@
+
+%run -i "/tmp/tmp80ajJ3.py"
+
+---: [11]  Kerala operation :-------
+---------------------------------------------
+Dimension of the data frame =  (42876, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                     2492
+4G                    31539
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  Kerala-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (3696, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   225
+CELLONE                 2045
+IDEA                     772
+VODAFONE                 654
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  Kerala-3G operation  :-------
+
+---: convert to  Kerala-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (39180, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  4407
+CELLONE                  945
+IDEA                    5042
+JIO                    23772
+VODAFONE                5014
+-------------------------------
+total no. of service provider =  5
+-----------------------------
+
+
+---:  Kerala-4G operation  :-------
+
+In [100]:
