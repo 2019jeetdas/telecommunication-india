@@ -1,0 +1,286 @@
+
+
+
+print("\n---: [20]  Tamil_Nadu operation :-------")
+
+df_Tamil_Nadu = df[df.Service_Area == 'Tamil Nadu']
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df_Tamil_Nadu.shape)
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df_Tamil_Nadu.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n") 
+
+# available technologies in  Tamil_Nadu 
+
+techno_Tamil_Nadu = df_Tamil_Nadu.groupby(['technology'])[['signal_strength']].count()
+print("---------------------------------")
+print("\t Available techonologies : ")
+print("-------------------------------")
+print(techno_Tamil_Nadu)
+print("-------------------------------")
+count = 0
+for row in range(len(techno_Tamil_Nadu)): 
+        count = count+1
+print("total no. of available technologies = ",count)        
+print("-----------------------------\n") 
+
+#  Tamil_Nadu 3G operation
+
+print("\n---: convert to  Tamil_Nadu-3G operation :-------")
+df_Tamil_Nadu_3G = df_Tamil_Nadu[df_Tamil_Nadu.technology == '3G']
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df_Tamil_Nadu_3G.shape)
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df_Tamil_Nadu_3G.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+# print service providers in  Tamil_Nadu 3G
+
+df_Tamil_Nadu_3G_sp = df_Tamil_Nadu_3G.groupby(['Service_provider'])[['technology']].count()
+print("---------------------------------")
+print("\t Service provider names  : ")
+print("-------------------------------")
+print(df_Tamil_Nadu_3G_sp)
+print("-------------------------------")
+count = 0
+for row in range(len(df_Tamil_Nadu_3G_sp)): 
+        count = count+1
+print("total no. of service provider = ",count)        
+print("-----------------------------\n")                                                                              
+ 
+# df_Tamil_Nadu_3G_sp_AIRTEL
+# df_Tamil_Nadu_3G_sp_CELLONE                 
+# df_Tamil_Nadu_3G_sp_IDEA                     
+# df_Tamil_Nadu_3G_sp_VODAFONE   
+
+print("\n---:  Tamil_Nadu-3G operation  :-------")
+
+df_Tamil_Nadu_3G_AIRTEL = df_Tamil_Nadu_3G[df_Tamil_Nadu_3G.Service_provider == 'AIRTEL']
+df_Tamil_Nadu_3G_CELLONE = df_Tamil_Nadu_3G[df_Tamil_Nadu_3G.Service_provider == 'CELLONE']
+df_Tamil_Nadu_3G_IDEA = df_Tamil_Nadu_3G[df_Tamil_Nadu_3G.Service_provider == 'IDEA']
+df_Tamil_Nadu_3G_VODAFONE = df_Tamil_Nadu_3G[df_Tamil_Nadu_3G.Service_provider == 'VODAFONE']
+
+# [1-A]  Tamil_Nadu  3G upload plotting
+
+df_Tamil_Nadu_3G_AIRTEL_upload = df_Tamil_Nadu_3G_AIRTEL[df_Tamil_Nadu_3G_AIRTEL.Download_Upload == 'upload']
+df_Tamil_Nadu_3G_CELLONE_upload = df_Tamil_Nadu_3G_CELLONE[df_Tamil_Nadu_3G_CELLONE.Download_Upload == 'upload']
+df_Tamil_Nadu_3G_IDEA_upload = df_Tamil_Nadu_3G_IDEA[df_Tamil_Nadu_3G_IDEA.Download_Upload == 'upload']
+df_Tamil_Nadu_3G_VODAFONE_upload = df_Tamil_Nadu_3G_VODAFONE[df_Tamil_Nadu_3G_VODAFONE.Download_Upload == 'upload']
+
+x1 = np.arange(0,len(df_Tamil_Nadu_3G_AIRTEL_upload['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_Tamil_Nadu_3G_CELLONE_upload['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_Tamil_Nadu_3G_IDEA_upload['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_Tamil_Nadu_3G_VODAFONE_upload['Data_Speed.Kbps.']))
+
+plt.title('[1-A]  Tamil_Nadu  3G upload plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_Tamil_Nadu_3G_AIRTEL_upload['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - upload",
+            marker='*')
+
+plt.scatter(x2,
+            df_Tamil_Nadu_3G_CELLONE_upload['Data_Speed.Kbps.'],
+            label="[2] CELLONE - upload",
+            marker='+')
+            
+plt.scatter(x3,
+            df_Tamil_Nadu_3G_IDEA_upload['Data_Speed.Kbps.'],
+            label="[3] IDEA - upload",
+            marker='^')
+
+plt.scatter(x4,
+            df_Tamil_Nadu_3G_VODAFONE_upload['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - upload",
+            marker='o')
+
+plt.legend()
+plt.show()                
+
+#[1-B]  Tamil_Nadu  3G download plotting
+
+                                                                                                                                                          
+df_Tamil_Nadu_3G_AIRTEL_download = df_Tamil_Nadu_3G_AIRTEL[df_Tamil_Nadu_3G_AIRTEL.Download_Upload == 'download']
+df_Tamil_Nadu_3G_CELLONE_download = df_Tamil_Nadu_3G_CELLONE[df_Tamil_Nadu_3G_CELLONE.Download_Upload == 'download']
+df_Tamil_Nadu_3G_IDEA_download = df_Tamil_Nadu_3G_IDEA[df_Tamil_Nadu_3G_IDEA.Download_Upload == 'download']
+df_Tamil_Nadu_3G_VODAFONE_download = df_Tamil_Nadu_3G_VODAFONE[df_Tamil_Nadu_3G_VODAFONE.Download_Upload == 'download']
+
+x1 = np.arange(0,len(df_Tamil_Nadu_3G_AIRTEL_download['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_Tamil_Nadu_3G_CELLONE_download['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_Tamil_Nadu_3G_IDEA_download['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_Tamil_Nadu_3G_VODAFONE_download['Data_Speed.Kbps.']))
+
+plt.title('[1-B]  Tamil_Nadu  3G download plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_Tamil_Nadu_3G_AIRTEL_download['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - download",
+            marker='*')
+
+plt.scatter(x2,
+            df_Tamil_Nadu_3G_CELLONE_download['Data_Speed.Kbps.'],
+            label="[2] CELLONE - download",
+            marker='+')
+            
+plt.scatter(x3,
+            df_Tamil_Nadu_3G_IDEA_download['Data_Speed.Kbps.'],
+            label="[3] IDEA - download",
+            marker='^')
+
+plt.scatter(x4,
+            df_Tamil_Nadu_3G_VODAFONE_download['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - download",
+            marker='o')
+
+plt.legend()
+plt.show() 
+
+#  Tamil_Nadu 4G operation
+
+print("\n---: convert to  Tamil_Nadu-4G operation :-------")
+df_Tamil_Nadu_4G = df_Tamil_Nadu[df_Tamil_Nadu.technology == '4G']
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df_Tamil_Nadu_4G.shape)
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df_Tamil_Nadu_4G.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+# print service providers in  Tamil_Nadu 4G
+
+df_Tamil_Nadu_4G_sp = df_Tamil_Nadu_4G.groupby(['Service_provider'])[['technology']].count()
+print("---------------------------------")
+print("\t Service provider names : ")
+print("-------------------------------")
+print(df_Tamil_Nadu_4G_sp)
+print("-------------------------------")
+count = 0
+for row in range(len(df_Tamil_Nadu_4G_sp)): 
+        count = count+1
+print("total no. of service provider = ",count)        
+print("-----------------------------\n")                                                                              
+ 
+# df_Tamil_Nadu_4G_sp_AIRTEL
+# df_Tamil_Nadu_4G_sp_CELLONE                 
+# df_Tamil_Nadu_4G_sp_IDEA                     
+# df_Tamil_Nadu_4G_sp_VODAFONE 
+# df_Tamil_Nadu_4G_sp_JIO  
+
+print("\n---:  Tamil_Nadu-4G operation  :-------")
+
+df_Tamil_Nadu_4G_AIRTEL = df_Tamil_Nadu_4G[df_Tamil_Nadu_4G.Service_provider == 'AIRTEL']
+df_Tamil_Nadu_4G_CELLONE = df_Tamil_Nadu_4G[df_Tamil_Nadu_4G.Service_provider == 'CELLONE']
+df_Tamil_Nadu_4G_IDEA = df_Tamil_Nadu_4G[df_Tamil_Nadu_4G.Service_provider == 'IDEA']
+df_Tamil_Nadu_4G_VODAFONE = df_Tamil_Nadu_4G[df_Tamil_Nadu_4G.Service_provider == 'VODAFONE']
+df_Tamil_Nadu_4G_JIO = df_Tamil_Nadu_4G[df_Tamil_Nadu_4G.Service_provider == 'JIO']
+
+#  Tamil_Nadu  4G upload plotting
+
+df_Tamil_Nadu_4G_AIRTEL_upload = df_Tamil_Nadu_4G_AIRTEL[df_Tamil_Nadu_4G_AIRTEL.Download_Upload == 'upload']
+df_Tamil_Nadu_4G_CELLONE_upload = df_Tamil_Nadu_4G_CELLONE[df_Tamil_Nadu_4G_CELLONE.Download_Upload == 'upload']
+df_Tamil_Nadu_4G_IDEA_upload = df_Tamil_Nadu_4G_IDEA[df_Tamil_Nadu_4G_IDEA.Download_Upload == 'upload']
+df_Tamil_Nadu_4G_VODAFONE_upload = df_Tamil_Nadu_4G_VODAFONE[df_Tamil_Nadu_4G_VODAFONE.Download_Upload == 'upload']
+df_Tamil_Nadu_4G_JIO_upload = df_Tamil_Nadu_4G_JIO[df_Tamil_Nadu_4G_JIO.Download_Upload == 'upload']
+
+x1 = np.arange(0,len(df_Tamil_Nadu_4G_AIRTEL_upload['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_Tamil_Nadu_4G_CELLONE_upload['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_Tamil_Nadu_4G_IDEA_upload['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_Tamil_Nadu_4G_VODAFONE_upload['Data_Speed.Kbps.']))
+x5 = np.arange(0,len(df_Tamil_Nadu_4G_JIO_upload['Data_Speed.Kbps.']))
+
+plt.title('[1-C]  Tamil_Nadu  4G upload plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_Tamil_Nadu_4G_AIRTEL_upload['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - upload",
+            marker='*')
+
+plt.scatter(x2,
+            df_Tamil_Nadu_4G_CELLONE_upload['Data_Speed.Kbps.'],
+            label="[2] CELLONE - upload",
+            marker='+')
+            
+plt.scatter(x3,
+            df_Tamil_Nadu_4G_IDEA_upload['Data_Speed.Kbps.'],
+            label="[3] IDEA - upload",
+            marker='^')
+
+plt.scatter(x4,
+            df_Tamil_Nadu_4G_VODAFONE_upload['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - upload",
+            marker='o')
+            
+plt.scatter(x5,
+            df_Tamil_Nadu_4G_JIO_upload['Data_Speed.Kbps.'],
+            label="[5] JIO - upload",
+            marker='1')            
+
+plt.legend()
+plt.show()                
+
+
+#  Tamil_Nadu  4G download plotting
+                                                                                                                                                          
+df_Tamil_Nadu_4G_AIRTEL_download = df_Tamil_Nadu_4G_AIRTEL[df_Tamil_Nadu_4G_AIRTEL.Download_Upload == 'download']
+df_Tamil_Nadu_4G_CELLONE_download = df_Tamil_Nadu_4G_CELLONE[df_Tamil_Nadu_4G_CELLONE.Download_Upload == 'download']
+df_Tamil_Nadu_4G_IDEA_download = df_Tamil_Nadu_4G_IDEA[df_Tamil_Nadu_4G_IDEA.Download_Upload == 'download']
+df_Tamil_Nadu_4G_VODAFONE_download = df_Tamil_Nadu_4G_VODAFONE[df_Tamil_Nadu_4G_VODAFONE.Download_Upload == 'download']
+df_Tamil_Nadu_4G_JIO_download = df_Tamil_Nadu_4G_JIO[df_Tamil_Nadu_4G_JIO.Download_Upload == 'download']
+
+x1 = np.arange(0,len(df_Tamil_Nadu_4G_AIRTEL_download['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_Tamil_Nadu_4G_CELLONE_download['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_Tamil_Nadu_4G_IDEA_download['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_Tamil_Nadu_4G_VODAFONE_download['Data_Speed.Kbps.']))
+x5 = np.arange(0,len(df_Tamil_Nadu_4G_JIO_download['Data_Speed.Kbps.']))
+
+plt.title('[1-D]  Tamil_Nadu  4G download plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_Tamil_Nadu_4G_AIRTEL_download['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - download",
+            marker='*')
+
+plt.scatter(x2,
+            df_Tamil_Nadu_4G_CELLONE_download['Data_Speed.Kbps.'],
+            label="[2] CELLONE - download",
+            marker='+')
+            
+plt.scatter(x3,
+            df_Tamil_Nadu_4G_IDEA_download['Data_Speed.Kbps.'],
+            label="[3] IDEA - download",
+            marker='^')
+
+plt.scatter(x4,
+            df_Tamil_Nadu_4G_VODAFONE_download['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - download",
+            marker='o')
+            
+plt.scatter(x5,
+            df_Tamil_Nadu_4G_JIO_download['Data_Speed.Kbps.'],
+            label="[5] JIO - download",
+            marker='1')            
+
+plt.legend()
+plt.show()                                 
