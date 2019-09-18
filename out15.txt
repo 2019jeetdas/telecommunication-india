@@ -1,0 +1,94 @@
+
+%run -i "/tmp/tmpgGBCoq.py"
+
+---: [15]  Mumbai operation :-------
+---------------------------------------------
+Dimension of the data frame =  (18988, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      624
+4G                    16272
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  Mumbai-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (729, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   283
+DOLPHIN                   42
+IDEA                       2
+VODAFONE                 402
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  Mumbai-3G operation  :-------
+
+---: convert to  Mumbai-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (18259, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  2708
+IDEA                     490
+JIO                    10376
+VODAFONE                4685
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  Mumbai-4G operation  :-------
