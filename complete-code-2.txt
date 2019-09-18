@@ -1,0 +1,84 @@
+# -*- coding: utf-8 -*-
+#-----(10-D) July19_myspeed -----
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import random
+
+df = pd.read_csv ('/home/jeet/Desktop/July19_myspeed.csv',encoding="cp1252")
+print("\n------- output data :-----------\n")
+print("July19_myspeed data analysis:")
+print("\n-----------------------------------\n")
+
+
+# Question – A : get row and column numbers 
+
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df.shape)
+print('---------------------------------------------')
+
+# Question – B : print column names :
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+# 0 --> Service_provider
+# 1 --> technology
+# 2 --> Download_Upload
+# 3 --> Data_Speed.Kbps.
+# 4 --> signal_strength
+# 5 --> Service_Area
+
+# print service providers 
+
+service_provider = df.groupby(['Service_provider'])[['technology']].count()
+print("--------------------------------------------")
+print("\t Service provider names : ")
+print("--------------------------------------------")
+print(service_provider)
+print("--------------------------------------------")
+count = 0
+for row in range(len(service_provider)): 
+        count = count+1
+print("total no. of service provider = ",count)        
+print("-------------------------------------------\n")
+
+# available technologies
+
+techno = df.groupby(['technology'])[['signal_strength']].count()
+print("---------------------------------")
+print("\t Available techonologies : ")
+print("-------------------------------")
+print(techno)
+print("-------------------------------")
+count = 0
+for row in range(len(techno)): 
+        count = count+1
+print("total no. of available technologies = ",count)        
+print("-----------------------------\n")
+
+# service areas 
+
+ser_area = df.groupby(['Service_Area'])[['signal_strength']].count()
+print("---------------------------------")
+print("\t Service areas : ")
+print("-------------------------------")
+count = 0
+for i in range(0,len(ser_area)):
+        print("--------------------------------------------")
+        print("[",i+1,"]",ser_area[i:i+1]) 
+        print("--------------------------------------------")
+        count = count + 1
+        
+print("Total no. of service area = ",count)        
+print("-----------------------------------------\n")
+
+
+
+
