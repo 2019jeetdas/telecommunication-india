@@ -1,0 +1,97 @@
+
+%run -i "/tmp/tmp0WhVT8.py"
+
+---: [22]  UP_West operation :-------
+---------------------------------------------
+Dimension of the data frame =  (36266, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      716
+4G                    33027
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  UP_West-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (1020, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   150
+CELLONE                   10
+IDEA                     545
+VODAFONE                 315
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  UP_West-3G operation  :-------
+
+---: convert to  UP_West-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (35246, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  3765
+CELLONE                    2
+IDEA                    5100
+JIO                    25117
+VODAFONE                1262
+-------------------------------
+total no. of service provider =  5
+-----------------------------
+
+
+---:  UP_West-4G operation  :-------
+
+In [179]:
