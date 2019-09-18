@@ -1,0 +1,285 @@
+
+
+
+print("\n---: [13]  Madhya_Pradesh operation :-------")
+df_Madhya_Pradesh = df[df.Service_Area == 'Madhya Pradesh']
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df_Madhya_Pradesh.shape)
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df_Madhya_Pradesh.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n") 
+
+# available technologies in  Madhya_Pradesh 
+
+techno_Madhya_Pradesh = df_Madhya_Pradesh.groupby(['technology'])[['signal_strength']].count()
+print("---------------------------------")
+print("\t Available techonologies : ")
+print("-------------------------------")
+print(techno_Madhya_Pradesh)
+print("-------------------------------")
+count = 0
+for row in range(len(techno_Madhya_Pradesh)): 
+        count = count+1
+print("total no. of available technologies = ",count)        
+print("-----------------------------\n") 
+
+#  Madhya_Pradesh 3G operation
+
+print("\n---: convert to  Madhya_Pradesh-3G operation :-------")
+df_Madhya_Pradesh_3G = df_Madhya_Pradesh[df_Madhya_Pradesh.technology == '3G']
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df_Madhya_Pradesh_3G.shape)
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df_Madhya_Pradesh_3G.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+# print service providers in  Madhya_Pradesh 3G
+
+df_Madhya_Pradesh_3G_sp = df_Madhya_Pradesh_3G.groupby(['Service_provider'])[['technology']].count()
+print("---------------------------------")
+print("\t Service provider names  : ")
+print("-------------------------------")
+print(df_Madhya_Pradesh_3G_sp)
+print("-------------------------------")
+count = 0
+for row in range(len(df_Madhya_Pradesh_3G_sp)): 
+        count = count+1
+print("total no. of service provider = ",count)        
+print("-----------------------------\n")                                                                              
+ 
+# df_Madhya_Pradesh_3G_sp_AIRTEL
+# df_Madhya_Pradesh_3G_sp_CELLONE                 
+# df_Madhya_Pradesh_3G_sp_IDEA                     
+# df_Madhya_Pradesh_3G_sp_VODAFONE   
+
+print("\n---:  Madhya_Pradesh-3G operation  :-------")
+
+df_Madhya_Pradesh_3G_AIRTEL = df_Madhya_Pradesh_3G[df_Madhya_Pradesh_3G.Service_provider == 'AIRTEL']
+df_Madhya_Pradesh_3G_CELLONE = df_Madhya_Pradesh_3G[df_Madhya_Pradesh_3G.Service_provider == 'CELLONE']
+df_Madhya_Pradesh_3G_IDEA = df_Madhya_Pradesh_3G[df_Madhya_Pradesh_3G.Service_provider == 'IDEA']
+df_Madhya_Pradesh_3G_VODAFONE = df_Madhya_Pradesh_3G[df_Madhya_Pradesh_3G.Service_provider == 'VODAFONE']
+
+# [1-A]  Madhya_Pradesh  3G upload plotting
+
+df_Madhya_Pradesh_3G_AIRTEL_upload = df_Madhya_Pradesh_3G_AIRTEL[df_Madhya_Pradesh_3G_AIRTEL.Download_Upload == 'upload']
+df_Madhya_Pradesh_3G_CELLONE_upload = df_Madhya_Pradesh_3G_CELLONE[df_Madhya_Pradesh_3G_CELLONE.Download_Upload == 'upload']
+df_Madhya_Pradesh_3G_IDEA_upload = df_Madhya_Pradesh_3G_IDEA[df_Madhya_Pradesh_3G_IDEA.Download_Upload == 'upload']
+df_Madhya_Pradesh_3G_VODAFONE_upload = df_Madhya_Pradesh_3G_VODAFONE[df_Madhya_Pradesh_3G_VODAFONE.Download_Upload == 'upload']
+
+x1 = np.arange(0,len(df_Madhya_Pradesh_3G_AIRTEL_upload['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_Madhya_Pradesh_3G_CELLONE_upload['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_Madhya_Pradesh_3G_IDEA_upload['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_Madhya_Pradesh_3G_VODAFONE_upload['Data_Speed.Kbps.']))
+
+plt.title('[1-A]  Madhya_Pradesh  3G upload plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_Madhya_Pradesh_3G_AIRTEL_upload['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - upload",
+            marker='*')
+
+plt.scatter(x2,
+            df_Madhya_Pradesh_3G_CELLONE_upload['Data_Speed.Kbps.'],
+            label="[2] CELLONE - upload",
+            marker='+')
+            
+plt.scatter(x3,
+            df_Madhya_Pradesh_3G_IDEA_upload['Data_Speed.Kbps.'],
+            label="[3] IDEA - upload",
+            marker='^')
+
+plt.scatter(x4,
+            df_Madhya_Pradesh_3G_VODAFONE_upload['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - upload",
+            marker='o')
+
+plt.legend()
+plt.show()                
+
+#[1-B]  Madhya_Pradesh  3G download plotting
+
+                                                                                                                                                          
+df_Madhya_Pradesh_3G_AIRTEL_download = df_Madhya_Pradesh_3G_AIRTEL[df_Madhya_Pradesh_3G_AIRTEL.Download_Upload == 'download']
+df_Madhya_Pradesh_3G_CELLONE_download = df_Madhya_Pradesh_3G_CELLONE[df_Madhya_Pradesh_3G_CELLONE.Download_Upload == 'download']
+df_Madhya_Pradesh_3G_IDEA_download = df_Madhya_Pradesh_3G_IDEA[df_Madhya_Pradesh_3G_IDEA.Download_Upload == 'download']
+df_Madhya_Pradesh_3G_VODAFONE_download = df_Madhya_Pradesh_3G_VODAFONE[df_Madhya_Pradesh_3G_VODAFONE.Download_Upload == 'download']
+
+x1 = np.arange(0,len(df_Madhya_Pradesh_3G_AIRTEL_download['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_Madhya_Pradesh_3G_CELLONE_download['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_Madhya_Pradesh_3G_IDEA_download['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_Madhya_Pradesh_3G_VODAFONE_download['Data_Speed.Kbps.']))
+
+plt.title('[1-B]  Madhya_Pradesh  3G download plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_Madhya_Pradesh_3G_AIRTEL_download['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - download",
+            marker='*')
+
+plt.scatter(x2,
+            df_Madhya_Pradesh_3G_CELLONE_download['Data_Speed.Kbps.'],
+            label="[2] CELLONE - download",
+            marker='+')
+            
+plt.scatter(x3,
+            df_Madhya_Pradesh_3G_IDEA_download['Data_Speed.Kbps.'],
+            label="[3] IDEA - download",
+            marker='^')
+
+plt.scatter(x4,
+            df_Madhya_Pradesh_3G_VODAFONE_download['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - download",
+            marker='o')
+
+plt.legend()
+plt.show() 
+
+#  Madhya_Pradesh 4G operation
+
+print("\n---: convert to  Madhya_Pradesh-4G operation :-------")
+df_Madhya_Pradesh_4G = df_Madhya_Pradesh[df_Madhya_Pradesh.technology == '4G']
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df_Madhya_Pradesh_4G.shape)
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df_Madhya_Pradesh_4G.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+# print service providers in  Madhya_Pradesh 4G
+
+df_Madhya_Pradesh_4G_sp = df_Madhya_Pradesh_4G.groupby(['Service_provider'])[['technology']].count()
+print("---------------------------------")
+print("\t Service provider names : ")
+print("-------------------------------")
+print(df_Madhya_Pradesh_4G_sp)
+print("-------------------------------")
+count = 0
+for row in range(len(df_Madhya_Pradesh_4G_sp)): 
+        count = count+1
+print("total no. of service provider = ",count)        
+print("-----------------------------\n")                                                                              
+ 
+# df_Madhya_Pradesh_4G_sp_AIRTEL
+# df_Madhya_Pradesh_4G_sp_CELLONE                 
+# df_Madhya_Pradesh_4G_sp_IDEA                     
+# df_Madhya_Pradesh_4G_sp_VODAFONE 
+# df_Madhya_Pradesh_4G_sp_JIO  
+
+print("\n---:  Madhya_Pradesh-4G operation  :-------")
+
+df_Madhya_Pradesh_4G_AIRTEL = df_Madhya_Pradesh_4G[df_Madhya_Pradesh_4G.Service_provider == 'AIRTEL']
+df_Madhya_Pradesh_4G_CELLONE = df_Madhya_Pradesh_4G[df_Madhya_Pradesh_4G.Service_provider == 'CELLONE']
+df_Madhya_Pradesh_4G_IDEA = df_Madhya_Pradesh_4G[df_Madhya_Pradesh_4G.Service_provider == 'IDEA']
+df_Madhya_Pradesh_4G_VODAFONE = df_Madhya_Pradesh_4G[df_Madhya_Pradesh_4G.Service_provider == 'VODAFONE']
+df_Madhya_Pradesh_4G_JIO = df_Madhya_Pradesh_4G[df_Madhya_Pradesh_4G.Service_provider == 'JIO']
+
+#  Madhya_Pradesh  4G upload plotting
+
+df_Madhya_Pradesh_4G_AIRTEL_upload = df_Madhya_Pradesh_4G_AIRTEL[df_Madhya_Pradesh_4G_AIRTEL.Download_Upload == 'upload']
+df_Madhya_Pradesh_4G_CELLONE_upload = df_Madhya_Pradesh_4G_CELLONE[df_Madhya_Pradesh_4G_CELLONE.Download_Upload == 'upload']
+df_Madhya_Pradesh_4G_IDEA_upload = df_Madhya_Pradesh_4G_IDEA[df_Madhya_Pradesh_4G_IDEA.Download_Upload == 'upload']
+df_Madhya_Pradesh_4G_VODAFONE_upload = df_Madhya_Pradesh_4G_VODAFONE[df_Madhya_Pradesh_4G_VODAFONE.Download_Upload == 'upload']
+df_Madhya_Pradesh_4G_JIO_upload = df_Madhya_Pradesh_4G_JIO[df_Madhya_Pradesh_4G_JIO.Download_Upload == 'upload']
+
+x1 = np.arange(0,len(df_Madhya_Pradesh_4G_AIRTEL_upload['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_Madhya_Pradesh_4G_CELLONE_upload['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_Madhya_Pradesh_4G_IDEA_upload['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_Madhya_Pradesh_4G_VODAFONE_upload['Data_Speed.Kbps.']))
+x5 = np.arange(0,len(df_Madhya_Pradesh_4G_JIO_upload['Data_Speed.Kbps.']))
+
+plt.title('[1-C]  Madhya_Pradesh  4G upload plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_Madhya_Pradesh_4G_AIRTEL_upload['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - upload",
+            marker='*')
+
+plt.scatter(x2,
+            df_Madhya_Pradesh_4G_CELLONE_upload['Data_Speed.Kbps.'],
+            label="[2] CELLONE - upload",
+            marker='+')
+            
+plt.scatter(x3,
+            df_Madhya_Pradesh_4G_IDEA_upload['Data_Speed.Kbps.'],
+            label="[3] IDEA - upload",
+            marker='^')
+
+plt.scatter(x4,
+            df_Madhya_Pradesh_4G_VODAFONE_upload['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - upload",
+            marker='o')
+            
+plt.scatter(x5,
+            df_Madhya_Pradesh_4G_JIO_upload['Data_Speed.Kbps.'],
+            label="[5] JIO - upload",
+            marker='1')            
+
+plt.legend()
+plt.show()                
+
+
+#  Madhya_Pradesh  4G download plotting
+                                                                                                                                                          
+df_Madhya_Pradesh_4G_AIRTEL_download = df_Madhya_Pradesh_4G_AIRTEL[df_Madhya_Pradesh_4G_AIRTEL.Download_Upload == 'download']
+df_Madhya_Pradesh_4G_CELLONE_download = df_Madhya_Pradesh_4G_CELLONE[df_Madhya_Pradesh_4G_CELLONE.Download_Upload == 'download']
+df_Madhya_Pradesh_4G_IDEA_download = df_Madhya_Pradesh_4G_IDEA[df_Madhya_Pradesh_4G_IDEA.Download_Upload == 'download']
+df_Madhya_Pradesh_4G_VODAFONE_download = df_Madhya_Pradesh_4G_VODAFONE[df_Madhya_Pradesh_4G_VODAFONE.Download_Upload == 'download']
+df_Madhya_Pradesh_4G_JIO_download = df_Madhya_Pradesh_4G_JIO[df_Madhya_Pradesh_4G_JIO.Download_Upload == 'download']
+
+x1 = np.arange(0,len(df_Madhya_Pradesh_4G_AIRTEL_download['Data_Speed.Kbps.']))
+x2 = np.arange(0,len(df_Madhya_Pradesh_4G_CELLONE_download['Data_Speed.Kbps.']))
+x3 = np.arange(0,len(df_Madhya_Pradesh_4G_IDEA_download['Data_Speed.Kbps.']))
+x4 = np.arange(0,len(df_Madhya_Pradesh_4G_VODAFONE_download['Data_Speed.Kbps.']))
+x5 = np.arange(0,len(df_Madhya_Pradesh_4G_JIO_download['Data_Speed.Kbps.']))
+
+plt.title('[1-D]  Madhya_Pradesh  4G download plotting')
+plt.xlabel("Number of observations ----->")
+plt.ylabel("Data_Speed ( in Kbps.) ----->")
+
+plt.scatter(x1,
+            df_Madhya_Pradesh_4G_AIRTEL_download['Data_Speed.Kbps.'],
+            label="[1] AIRTEL - download",
+            marker='*')
+
+plt.scatter(x2,
+            df_Madhya_Pradesh_4G_CELLONE_download['Data_Speed.Kbps.'],
+            label="[2] CELLONE - download",
+            marker='+')
+            
+plt.scatter(x3,
+            df_Madhya_Pradesh_4G_IDEA_download['Data_Speed.Kbps.'],
+            label="[3] IDEA - download",
+            marker='^')
+
+plt.scatter(x4,
+            df_Madhya_Pradesh_4G_VODAFONE_download['Data_Speed.Kbps.'],
+            label="[4] VODAFONE - download",
+            marker='o')
+            
+plt.scatter(x5,
+            df_Madhya_Pradesh_4G_JIO_download['Data_Speed.Kbps.'],
+            label="[5] JIO - download",
+            marker='1')            
+
+plt.legend()
+plt.show()                                 
