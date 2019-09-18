@@ -1,0 +1,96 @@
+
+%run -i "/tmp/tmpGzwLC7.py"
+
+---: [20]  Tamil_Nadu operation :-------
+---------------------------------------------
+Dimension of the data frame =  (27518, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                     2445
+4G                    20624
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  Tamil_Nadu-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (3516, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   123
+CELLONE                 2845
+VODAFONE                 548
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---:  Tamil_Nadu-3G operation  :-------
+
+---: convert to  Tamil_Nadu-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (24002, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  4410
+CELLONE                  508
+IDEA                    1578
+JIO                    12515
+VODAFONE                4991
+-------------------------------
+total no. of service provider =  5
+-----------------------------
+
+
+---:  Tamil_Nadu-4G operation  :-------
+
+In [167]:
