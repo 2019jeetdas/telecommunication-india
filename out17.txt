@@ -1,0 +1,92 @@
+
+%run -i "/tmp/tmpo69pqI.py"
+
+---: [17]  Orissa operation :-------
+---------------------------------------------
+Dimension of the data frame =  (16210, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      134
+4G                    14460
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  Orissa-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (207, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   147
+VODAFONE                  60
+-------------------------------
+total no. of service provider =  2
+-----------------------------
+
+
+---:  Orissa-3G operation  :-------
+
+---: convert to  Orissa-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (16003, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  2379
+IDEA                     454
+JIO                    13162
+VODAFONE                   8
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  Orissa-4G operation  :-------
