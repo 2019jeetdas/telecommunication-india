@@ -1,0 +1,94 @@
+
+%run -i "/tmp/tmp8LIFvJ.py"
+
+---: [3]  Bihar operation :-------
+---------------------------------------------
+Dimension of the data frame =  (16244, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      223
+4G                    14008
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  bihar-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (278, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names in Bihar : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   215
+CELLONE                    4
+IDEA                      59
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---:  bihar-3G operation  :-------
+
+---: convert to  bihar-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (15966, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names in Bihar : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  6285
+CELLONE                    2
+IDEA                     631
+JIO                     9046
+VODAFONE                   2
+-------------------------------
+total no. of service provider =  5
+-----------------------------
+
+
+---:  bihar-4G operation  :-------
