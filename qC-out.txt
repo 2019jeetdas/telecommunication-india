@@ -1,0 +1,70 @@
+
+%run -i "/home/jeet/Desktop/3_mobile_connections.py"
+
+------- output data :-----------
+
+Mobile connections (in million) as on 31.03.2018 :
+
+-----------------------------------
+
+---------------------------------------------
+Dimension of the data frame =  (12, 2)
+---------------------------------------------
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Operators
+1 --> Total mobile connections (in million) as on 31.03.2018
+
+-----------------------------
+
+---------------------------------------
+         Mobile connection Operators
+---------------------------------------
+
+0 ----> Bharti Airtel Limited
+1 ----> RelianceTelecom LTD +Reliance Communications Ltd.
+2 ----> Reliance JioInfocomm Limited
+3 ----> Vodafone Essar
+4 ----> TATA Teleservices Ltd
+5 ----> Idea mobile Communication
+6 ----> Aircel
+7 ----> Quadrant Televentures Ltd.(Formerly HFCL Ltd)
+8 ----> Telenor
+9 ----> BSNL
+10 ----> MTNL
+11 ----> Total
+---------------------------------------
+
+
+--------------------------------------------------
+mobile connections (in million) as on 31.03.2018
+-----------------------------------------------------
+
+[ 0 ] Bharti Airtel Limited -------> 304 million
+
+[ 1 ] RelianceTelecom LTD +Reliance Communications Ltd. -------> 0 million
+
+[ 2 ] Reliance JioInfocomm Limited -------> 186 million
+
+[ 3 ] Vodafone Essar -------> 222 million
+
+[ 4 ] TATA Teleservices Ltd -------> 31 million
+
+[ 5 ] Idea mobile Communication -------> 211 million
+
+[ 6 ] Aircel -------> 78 million
+
+[ 7 ] Quadrant Televentures Ltd.(Formerly HFCL Ltd) -------> 0 million
+
+[ 8 ] Telenor -------> 37 million
+
+[ 9 ] BSNL -------> 112 million
+
+[ 10 ] MTNL -------> 3 million
+
+[ 11 ] Total -------> 1188 million
+
+-----------------------------------------------------
+
