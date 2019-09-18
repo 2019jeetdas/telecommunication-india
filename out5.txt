@@ -1,0 +1,96 @@
+%run -i "/tmp/tmp6aJ9mr.py"
+
+---: [5]  delhi operation :-------
+---------------------------------------------
+Dimension of the data frame =  (52144, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      639
+4G                    49022
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  delhi-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (863, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   278
+CELLONE                    2
+DOLPHIN                   10
+IDEA                     205
+VODAFONE                 368
+-------------------------------
+total no. of service provider =  5
+-----------------------------
+
+
+---:  delhi-3G operation  :-------
+
+---: convert to  delhi-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (51281, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  5028
+IDEA                      18
+JIO                    42144
+VODAFONE                4091
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  delhi-4G operation  :-------
+
+In [46]:
