@@ -1,0 +1,24 @@
+https://data.gov.in/resources/state-wise-no-telephone-lines-rural-area-during-2002-2012
+
+Telephone lines are fixed telephone lines that connect a subscribers terminal equipment to the public 
+switched telephone network and that have a port on a telephone exchange. Integrated services digital 
+network channels and fixed wireless subscribers are included. 
+State wise no of telephone lines has been furnished in the data.  
+
+---------------------------------------------------------------------------
+
+https://data.gov.in/resources/state-wise-no-telephone-lines-urban-area-during-2002-2012
+
+Telephone lines are fixed telephone lines that connect a subscribers terminal equipment to the public switched 
+telephone network and that have a port on a telephone exchange. Integrated services digital network channels and 
+fixed wireless subscribers are included. 
+State wise no of telephone lines has been furnished in the data.
+
+-------------------------------------------------------------------------------------
+
+https://data.gov.in/resources/operator-wise-mobile-connections-31032018-ministry-communications
+
+/Catalogs/Answers Data of Rajya Sabha Questions for Session 246/Operator-wise Mobile Connections as on 31.03.2018 
+(From : Ministry of Communications)
+
+Description: Get questions' Answers Data of Session 246 of Rajya Sabha provided by various ministries/departments.
