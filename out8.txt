@@ -1,0 +1,92 @@
+
+%run -i "/tmp/tmpZT_vcG.py"
+
+---: [8]  himachal_pradesh operation :-------
+---------------------------------------------
+Dimension of the data frame =  (6916, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                       59
+4G                     6090
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  himachal_pradesh-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (92, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                    66
+CELLONE                    8
+IDEA                      18
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---:  himachal_pradesh-3G operation  :-------
+
+---: convert to  himachal_pradesh-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (6824, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  3127
+IDEA                     134
+JIO                     3563
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---:  himachal_pradesh-4G operation  :-------
