@@ -1,0 +1,92 @@
+
+%run -i "/tmp/tmp6G0nc2.py"
+
+---: [2] Assam operation :-------
+---------------------------------------------
+Dimension of the data frame =  (7235, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                       68
+4G                     6085
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to assam-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (96, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names in Andhra Pradesh : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                    40
+CELLONE                    6
+VODAFONE                  50
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---: assam-3G operation  :-------
+
+---: convert to assam-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (7139, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names in Andhra Pradesh : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   631
+JIO                     5771
+VODAFONE                 737
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---: assam-4G operation  :-------
