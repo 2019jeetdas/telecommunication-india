@@ -1,0 +1,93 @@
+
+%run -i "/tmp/tmpbYdIDj.py"
+
+---: [18]  Punjab operation :-------
+---------------------------------------------
+Dimension of the data frame =  (20820, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Available techonologies : 
+-------------------------------
+            signal_strength
+technology                 
+3G                      207
+4G                    18300
+-------------------------------
+total no. of available technologies =  2
+-----------------------------
+
+
+---: convert to  Punjab-3G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (368, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names  : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                   217
+CELLONE                    4
+IDEA                     147
+-------------------------------
+total no. of service provider =  3
+-----------------------------
+
+
+---:  Punjab-3G operation  :-------
+
+---: convert to  Punjab-4G operation :-------
+---------------------------------------------
+Dimension of the data frame =  (20452, 6)
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Service_provider
+1 --> technology
+2 --> Download_Upload
+3 --> Data_Speed.Kbps.
+4 --> signal_strength
+5 --> Service_Area
+
+-----------------------------
+
+---------------------------------
+         Service provider names : 
+-------------------------------
+                  technology
+Service_provider            
+AIRTEL                  5460
+CELLONE                    4
+IDEA                    2005
+JIO                    12983
+-------------------------------
+total no. of service provider =  4
+-----------------------------
+
+
+---:  Punjab-4G operation  :-------
